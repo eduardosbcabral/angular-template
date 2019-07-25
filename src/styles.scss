@@ -3,6 +3,10 @@
 
 @import '~@angular/material/theming';
 
+@import "~primeng/resources/themes/nova-light/theme.css";
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/primeng.min.css";
+
 @include mat-core();
 $primary: mat-palette($mat-indigo);
 $accent: mat-palette($mat-pink, A200, A100, A400);
@@ -10,7 +14,6 @@ $warn: mat-palette($mat-red);
 $theme: mat-light-theme($primary, $accent, $warn); // Or mat-dark-theme
 
 @include angular-material-theme($theme);
-
 
 body {
   margin: 0;

@@ -1,0 +1,68 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+::ng-deep {
+  .ui-panelmenu .ui-panelmenu-header > a {
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 1px solid #edf1f7 !important;
+    color: #1a2138 !important;
+    font-weight: 600 !important;
+    font-size: .85rem !important;
+  }
+
+  .ui-panelmenu {
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-header:not(.ui-state-active) > a {
+    background: transparent !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-header:not(.ui-state-active) > a:hover {
+    color: mat-color($mat-indigo, A400) !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-header.ui-state-active > a {
+    color: mat-color($mat-indigo, A400) !important;
+    background: transparent !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-content {
+    border: none !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-panel {
+    margin-top: 0px !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-header > a .ui-panelmenu-icon {
+    color: #8f9bb3 !important;
+    float: right !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-header > a:hover .ui-panelmenu-icon {
+    color: mat-color($mat-indigo, A400) !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-header.ui-state-active > a .ui-panelmenu-icon {
+    color: mat-color($mat-indigo, A400) !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem {
+    font-size: .85rem !important;
+    margin-left: 15px !important;
+    font-weight: 700 !important;
+    border-bottom: 1px solid #edf1f7 !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:hover > span {
+    border-radius: 0px !important;
+    color: mat-color($mat-indigo, A200) !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:hover {
+    background-color: transparent !important;
+  }
+}

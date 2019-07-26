@@ -2,7 +2,14 @@
   <button (click)="this.drawer.toogle()" mat-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <h1>Angular App</h1>
+  <h1 class="app-title">Angular App</h1>
+  <span class="fill-remaining-space"></span>
+  <button 
+    title="Sair"
+    (click)="logout()"
+    mat-button>
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
 </mat-toolbar>
 
 <app-drawer></app-drawer>

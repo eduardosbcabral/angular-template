@@ -1,0 +1,25 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="usuarios">
+    <!-- Username Column -->
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef>Username</th>
+      <td mat-cell *matCellDef="let usuario">{{ usuario.username }}</td>
+    </ng-container>
+  
+    <!-- FirstName Column -->
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef>First Name</th>
+      <td mat-cell *matCellDef="let usuario">{{ usuario.firstName }}</td>
+    </ng-container>
+  
+    <!-- Last Name Column -->
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef>Last Name</th>
+      <td mat-cell *matCellDef="let usuario">{{ usuario.lastName }}</td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

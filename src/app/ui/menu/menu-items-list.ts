@@ -8,13 +8,7 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     label: 'Gestão de Processos',
-    icon: 'pi pi-file-o',
-    items: [
-      {
-        label: 'PAD',
-        routerLink: '/home',
-      }
-    ]
+    icon: 'pi pi-file-o'
   },
   {
     label: 'Gestão do Sistema',
@@ -22,7 +16,12 @@ export const MENU_ITEMS: MenuItem[] = [
     items: [
       {
         label: 'Usuários',
-        routerLink: 'gestao-sistema/usuarios'
+        items: [
+          {
+            label: 'Listar',
+            routerLink: ['/gestao-sistema/usuarios/listar'],
+          }
+        ]
       }
     ],
   },

@@ -16,10 +16,6 @@ export class MenuComponent {
   config = {
     paddingAtStart: true,
     interfaceWithRoute: true,
-    classname: 'menu-list',
-  //   fontColor: 'rgb(8, 54, 71)',
-  //   backgroundColor: 'rgb(208, 241, 239)',
-  //   selectedListFontColor: 'red',
    };
 
   constructor(private router: Router) { }

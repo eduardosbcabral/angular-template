@@ -7,7 +7,7 @@
     border-right: none !important;
     border-left: none !important;
     border-bottom: 1px solid #edf1f7 !important;
-    color: #1a2138 !important;
+    color: #414142 !important;
     font-weight: 600 !important;
     font-size: .85rem !important;
   }
@@ -29,6 +29,10 @@
     background: transparent !important;
   }
 
+  .ui-panelmenu .ui-panelmenu-header.ui-state-active > a > span {
+    color: mat-color($mat-indigo, A400) !important;
+  }
+
   .ui-panelmenu .ui-panelmenu-content {
     border: none !important;
   }
@@ -37,9 +41,25 @@
     margin-top: 0px !important;
   }
 
+  .ui-panelmenu .ui-menuitem-icon {
+    color: #8f9bb3 !important;
+  }
+
   .ui-panelmenu .ui-panelmenu-header > a .ui-panelmenu-icon {
     color: #8f9bb3 !important;
     float: right !important;
+    font-size: 1em !important;
+    margin-top: 4px !important;
+  }
+
+  .ui-panelmenu .ui-submenu-list ul {
+    margin-left: 0.7em !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-icon {
+    float: right !important;
+    font-size: 1em !important;
+    color: #8f9bb3 !important;
   }
 
   .ui-panelmenu .ui-panelmenu-header > a:hover .ui-panelmenu-icon {
@@ -50,11 +70,22 @@
     color: mat-color($mat-indigo, A400) !important;
   }
 
+  .ui-panelmenu .ui-menuitem-icon.ui-state-active {
+    color: mat-color($mat-indigo, A400) !important;
+  }
+
   .ui-panelmenu .ui-panelmenu-content .ui-menuitem {
     font-size: .85rem !important;
-    margin-left: 15px !important;
+    margin-left: 10px !important;
     font-weight: 700 !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link {
     border-bottom: 1px solid #edf1f7 !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link > span {
+    margin-left: 0.7em !important;
   }
 
   .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:hover > span {

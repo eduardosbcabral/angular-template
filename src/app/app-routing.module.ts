@@ -7,7 +7,15 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./pages/pages.module')
       .then(m => m.PagesModule),
-  }
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./core/auth/login/login.module')
+      .then(m => m.LoginModule),
+  },
+
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

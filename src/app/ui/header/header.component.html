@@ -2,12 +2,20 @@
   <button (click)="this.drawer.toogle()" mat-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <h1 class="app-title">Angular App</h1>
+  <h1>
+    <a class="app-title" [routerLink]="['/']">
+      {{ applicationName }}
+    </a>
+  </h1>
   <span class="fill-remaining-space"></span>
+  <button class="box-user" mat-button>
+    <img class="img-profile" src="assets/img/default_profile.png" />
+    <span>{{ currentUser.firstName }}</span>
+  </button>
   <button 
     title="Sair"
     (click)="logout()"
-    mat-button>
+    mat-icon-button>
     <mat-icon>exit_to_app</mat-icon>
   </button>
 </mat-toolbar>

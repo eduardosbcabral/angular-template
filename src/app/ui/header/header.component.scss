@@ -1,7 +1,33 @@
 .app-title {
   margin-left: 5px;
+  color: white;
+}
+
+.app-title:hover {
+  margin-left: 5px;
+  color: #dedede;
 }
 
 .fill-remaining-space {
   flex: 1 1 auto;
 }
+
+.box-user {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 40px;
+}
+
+.box-user img {
+  width: 20px;
+  padding-top: 13px;
+}
+
+.box-user span {
+  display: block;
+  font-size: 0.75rem;
+  position: relative;
+  bottom: 5px;
+}
+

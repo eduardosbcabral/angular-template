@@ -4,14 +4,19 @@ import { Observable, of, throwError } from 'rxjs';
 import { materialize, dematerialize, delay, mergeMap } from 'rxjs/operators';
 import { Usuario } from 'src/app/pages/usuarios/usuario.model';
 
-const users: Usuario[] = [{ id: 1, username: 'teste', password: 'teste', firstName: 'Test', lastName: 'User'}];
+const users: Usuario[] = [
+  { id: 1, username: 'teste', password: 'teste', firstName: 'Test', lastName: 'User'},
+  { id: 2, username: 'Eduardo', password: 'teste', firstName: 'Test', lastName: 'User'},
+  { id: 3, username: 'Felipe', password: 'teste', firstName: 'Test', lastName: 'User'},
+  { id: 4, username: 'Ligia', password: 'teste', firstName: 'Test', lastName: 'User'}
+];
 
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const { url, method, headers, body } = request;
+    const { url, method, headers, body, params } = request;
 
     return of(null)
       .pipe(mergeMap(handleRoute))
@@ -25,6 +30,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
           return authenticate();
         case url.endsWith('/users') && method === 'GET':
           return getUsers();
+        case url.endsWith('/users/search') && method === 'GET':
+          return searchUsers();
         default:
           return next.handle(request);
       }
@@ -42,6 +49,14 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         lastName: user.lastName,
         token: 'fake-jwt-token'
       });
+    }
+
+    function searchUsers() {
+      let username = params.get('username');
+      let result = users.find(x => x.username == username);
+      let array = Array.isArray(result) ? result : new Array(result);
+      console.log(array);
+      return ok(array);
     }
 
     function getUsers() {

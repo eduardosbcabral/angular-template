@@ -5,4 +5,6 @@ export class Usuario {
   firstName: string;
   lastName: string;
   token?: string;
+
+  toString? = (): string => this.username;
 }

@@ -1,0 +1,18 @@
+<div class="form-group">
+  <label for="typeahead-http">Pesquise:</label>
+  <input
+  id="typeahead-http"
+  type="text"
+  class="form-control"
+  [class.is-invalid]="searchFailed"
+  [ngbTypeahead]="search" 
+  [resultFormatter]="resultFormatter"
+  [inputFormatter]="inputFormatter"
+  editable="false"
+  placeholder="Pesquisar" />
+  <span *ngIf="searching">pesquisando...</span>
+  <div class="invalid-feedback" *ngIf="searchFailed">Desculpe, não foi possível pesquisar.</div>
+</div>
+
+<hr>
+<pre>Model: {{ model | json }}</pre>

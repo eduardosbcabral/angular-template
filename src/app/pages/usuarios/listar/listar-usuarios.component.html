@@ -1,4 +1,8 @@
 <div class="mat-elevation-z8">
+  <typeahead-http 
+  [searchFunction]="searchUsuarios" 
+  [resultFormatter]="resultFormatter"
+  [inputFormatter]="inputFormatter"></typeahead-http>
   <table mat-table [dataSource]="usuarios">
     <!-- Username Column -->
     <ng-container matColumnDef="username">

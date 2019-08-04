@@ -32,6 +32,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
           return getUsers();
         case url.endsWith('/users/search') && method === 'GET':
           return searchUsers();
+        case url.endsWith('/users/throwError') && method === 'GET':
+          return throwErrorsFromBackend();
         default:
           return next.handle(request);
       }
@@ -55,8 +57,11 @@ export class FakeBackendInterceptor implements HttpInterceptor {
       let username = params.get('username');
       let result = users.find(x => x.username == username);
       let array = Array.isArray(result) ? result : new Array(result);
-      console.log(array);
       return ok(array);
+    }
+
+    function throwErrorsFromBackend() {
+      return throwError({ Errors: ['Login é obrigatório', 'Nome é obrigatório'], Type: 'UserException' });
     }
 
     function getUsers() {

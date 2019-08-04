@@ -8,6 +8,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtInterceptor } from './core/auth/helpers/jwt.interceptor';
 import { ErrorInterceptor } from './core/auth/helpers/error.interceptor';
 import { fakeBackendProvider } from './core/auth/helpers/fake-backend';
+import { ToastrModule } from 'ngx-toastr';
+import { ExceptionInterceptor } from './core/components/exception-interceptor/exception-interceptor';
 
 
 @NgModule({
@@ -18,11 +20,13 @@ import { fakeBackendProvider } from './core/auth/helpers/fake-backend';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ExceptionInterceptor, multi: true },
     // provided used to create fake backend
     fakeBackendProvider
   ],

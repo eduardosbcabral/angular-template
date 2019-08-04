@@ -5,17 +5,19 @@ import { ListarUsuariosComponent } from './listar/listar-usuarios.component';
 import { UsuariosComponent } from './usuarios.component';
 import { AngularModule } from 'src/app/core/shared/angular.module';
 import { NgBootstrapModule } from 'src/app/core/shared/ng-bootstrap.module';
+import { CadastrarUsuarioComponent } from './cadastrar/cadastrar-usuario.component';
 
 
 @NgModule({
   imports: [
     AngularModule,
     NgBootstrapModule,
-    UsuariosRoutingModule
+    UsuariosRoutingModule,
   ],
   declarations: [
     UsuariosComponent,
-    ListarUsuariosComponent
+    ListarUsuariosComponent,
+    CadastrarUsuarioComponent
   ]
 })
 export class UsuariosModule {}

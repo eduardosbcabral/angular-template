@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 
 import { TypeaheadHttpModule } from '../components/typeahead-http/typeahead-http.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   imports: [
-    TypeaheadHttpModule
+    TypeaheadHttpModule,
   ],
   providers: [],
   declarations: [],
   exports: [
-    TypeaheadHttpModule
+    TypeaheadHttpModule,
   ]
 })
 export class NgBootstrapModule { }

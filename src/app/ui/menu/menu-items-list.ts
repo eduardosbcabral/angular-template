@@ -20,6 +20,10 @@ export const MENU_ITEMS: MenuItem[] = [
           {
             label: 'Listar',
             routerLink: ['/gestao-sistema/usuarios/listar'],
+          },
+          {
+            label: 'Cadastrar',
+            routerLink: ['/gestao-sistema/usuarios/cadastrar']
           }
         ]
       }

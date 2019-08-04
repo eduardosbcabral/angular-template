@@ -16,4 +16,8 @@ export class UsuarioService {
   searchUsers(username: string) : Observable<Usuario[]> {
     return this.http.get<Usuario[]>(`${environment.apiUrl}/users/search`, { params: { username: username } });
   }
+
+  throwError() {
+    return this.http.get<any>(`${environment.apiUrl}/users/throwError`);
+  }  
 }

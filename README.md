@@ -14,3 +14,5 @@ Template desenvolvido para facilitar o início do desenvolvimento de aplicaçõe
   - Drawer com menu dinâmico
   - Autorização
   - Páginas
+  - Typeahead http
+  - Interceptador de bad request

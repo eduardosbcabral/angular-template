@@ -8,7 +8,7 @@ import { MatDrawer } from '@angular/material/sidenav';
 })
 export class DrawerComponent implements OnInit {
 
-  @ViewChild('drawer', {static: false}) 
+  @ViewChild('drawer') 
   drawer: MatDrawer;
 
   constructor() {}

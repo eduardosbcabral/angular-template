@@ -19,4 +19,15 @@ export class CadastrarUsuarioComponent implements OnInit {
     .subscribe(err => console.log(err));
   }
 
+  searchUsuarios = () => {
+
+  }
+
+  inputFormatter = () => {
+
+  }
+
+  resultFormatter = () => {
+    
+  }
 }
